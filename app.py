@@ -7,7 +7,7 @@ import numpy as np
 
 
 #import plotly.express as px
-import streamlit_option_menu as option_menu
+
 st.title("Water Analysis")
 
 with st.sidebar:

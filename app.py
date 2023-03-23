@@ -12,4 +12,4 @@ with dataset:
 
     HK_data = pd.read_csv('finalHK.csv')
 
-    st.write(HK_data.head())
+    st.write(HK_data)

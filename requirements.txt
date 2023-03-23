@@ -1,8 +1,6 @@
-import streamlit as st
-import streamlit.components.v1 as components 
-import pandas as pd
-import numpy as np
-import plotly.express as px
-import chart_studio.plotly as py
-import chart_studio.tools as tls
-import plotly.graph_objs as go
+streamlit==0.80.0
+pandas==1.0.5
+numpy==1.18.5
+plotly==4.14.3
+plotly-express==0.4.0
+xlrd==1.2.0

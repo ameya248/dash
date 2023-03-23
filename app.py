@@ -1,12 +1,11 @@
 import streamlit as st
 import pandas as pd
-import streamlit as st
+
 import streamlit.components.v1 as components 
-import pandas as pd
+
 import numpy as np
-import chart_studio.plotly as py
-import chart_studio.tools as tls
-import plotly.graph_objs as go
+
+
 #import plotly.express as px
 import streamlit_option_menu as option_menu
 st.title("Water Analysis")

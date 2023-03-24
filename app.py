@@ -7,13 +7,7 @@ import chart_studio.plotly as py
 import chart_studio.tools as tls
 import plotly.graph_objs as go
 
-st.title("Water Analysis")
 
-with st.sidebar:
-    selected = option_menu.option_menu(
-        menu_title = "Main Menu",
-        options = ["Home", "EDA"]
-    )
     
 lakes_options = ["Lendiya", "Nawab Munshi Hussain Khan", "Kerwa Dam"]
 if selected == "Home":

@@ -29,7 +29,7 @@ if chart_select == 'Hathaikheda dam':
       df = pd.read_csv('finalHK.csv')
     
 df=uploaded_file
-global df
+
 if uploaded_file is not None:
     print(uploaded_file)
     try:

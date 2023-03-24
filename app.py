@@ -6,6 +6,9 @@ import plotly.express as px
 import chart_studio.plotly as py
 import chart_studio.tools as tls
 import plotly.graph_objs as go
+import streamlit as st
+import pandas as pd
+import plotly.express as px
 
 #configuration
 st.set_option('deprecation.showfileUploaderEncoding',False)
@@ -22,11 +25,8 @@ chart_select = st.sidebar.selectbox(
     options = ['Hathaikheda dam', 'Sarangpani lake', 'Upper lake']
 )
 if chart_select == 'Hathaikheda dam':
+      df = pd.read_csv('finalHK')
     
-    try:
-         df = pd.read_csv('finalHK')
-    except Exception as e:
-        print(e)
 
 
    

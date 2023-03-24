@@ -10,6 +10,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+
 #configuration
 st.set_option('deprecation.showfileUploaderEncoding',False)
 
@@ -27,7 +28,21 @@ chart_select = st.sidebar.selectbox(
 if chart_select == 'Hathaikheda dam':
       df = pd.read_csv('finalHK.csv')
     
-
+df=uploaded_file
+global df
+if uploaded_file is not None:
+    print(uploaded_file)
+    try:
+        df = pd.read_csv(uploaded_file)
+    except Exception as e:
+        print(e)
+        df = pd.read_excel(uploaded_file)
+global numeric_columns
+try:
+    st.write(df)
+    numeric_columns  = list(df.select_dtypes(['float','int' ]).columns)
+except Exception as e:
+    print(e)
 
    
 

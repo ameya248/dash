@@ -28,11 +28,7 @@ if chart_select == 'Hathaikheda dam':
     except Exception as e:
         print(e)
 
-if chart_select == 'Sarangpani lake':
-   
-   
-if chart_select == 'Upper lake':
-   
+
    
 
     

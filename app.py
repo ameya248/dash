@@ -30,13 +30,7 @@ if chart_select == 'Hathaikheda dam':
     
 
 
-if uploaded_file is not None:
-    print(df)
-    try:
-        df = pd.read_csv(df)
-    except Exception as e:
-        print(e)
-        df = pd.read_excel(df)
+
 global numeric_columns
 try:
     st.write(df)

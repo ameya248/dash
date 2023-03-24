@@ -25,7 +25,7 @@ chart_select = st.sidebar.selectbox(
     options = ['Hathaikheda dam', 'Sarangpani lake', 'Upper lake']
 )
 if chart_select == 'Hathaikheda dam':
-      df = pd.read_csv('finalHK')
+      df = pd.read_csv('finalHK.csv')
     
 
 

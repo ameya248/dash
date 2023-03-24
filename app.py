@@ -30,17 +30,10 @@ if chart_select == 'Hathaikheda dam':
 
 if chart_select == 'Sarangpani lake':
    
-    try:
-       
-    except Exception as e:
-        print(e)
-
+   
 if chart_select == 'Upper lake':
    
-    try:
-       
-    except Exception as e:
-        print(e)
+   
 
     
 

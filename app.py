@@ -28,15 +28,15 @@ chart_select = st.sidebar.selectbox(
 if chart_select == 'Hathaikheda dam':
       df = pd.read_csv('finalHK.csv')
     
-df=uploaded_file
+global df
 
 if uploaded_file is not None:
-    print(uploaded_file)
+    print(df)
     try:
-        df = pd.read_csv(uploaded_file)
+        df = pd.read_csv(df)
     except Exception as e:
         print(e)
-        df = pd.read_excel(uploaded_file)
+        df = pd.read_excel(df)
 global numeric_columns
 try:
     st.write(df)

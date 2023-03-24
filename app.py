@@ -28,7 +28,7 @@ chart_select = st.sidebar.selectbox(
 if chart_select == 'Hathaikheda dam':
       df = pd.read_csv('finalHK.csv')
     
-global df
+
 
 if uploaded_file is not None:
     print(df)

@@ -7,7 +7,40 @@ import chart_studio.plotly as py
 import chart_studio.tools as tls
 import plotly.graph_objs as go
 
+#configuration
+st.set_option('deprecation.showfileUploaderEncoding',False)
 
+#title
+st.title("Water Analysis")
+
+#add a sidebar
+st.sidebar.subheader("Visualisation Settings")
+
+# add a select widget to the sidebar
+chart_select = st.sidebar.selectbox(
+    label = "Select the Lake",
+    options = ['Hathaikheda dam', 'Sarangpani lake', 'Upper lake']
+)
+if chart_select == 'Hathaikheda dam':
+    
+    try:
+         df = pd.read_csv('finalHK)
+    except Exception as e:
+        print(e)
+
+if chart_select == 'Sarangpani lake':
+   
+    try:
+       
+    except Exception as e:
+        print(e)
+
+if chart_select == 'Upper lake':
+   
+    try:
+       
+    except Exception as e:
+        print(e)
 
     
 

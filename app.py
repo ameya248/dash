@@ -10,9 +10,13 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import streamlit_option_menu as option_menu
+from streamlit import HTML
+
+with open(‘styles.css’)as f:
+ st.markdown(f”<style>{f.read()}</style>”, unsafe_allow_html = True)
 
 #title
-st.write('<p style = color: rgb(57, 48, 83);"> ##Water Quality Analysis of Bhopal Lakes \n</p>', unsafe_allow_html = True)
+st.write("Water Quality Analysis of Bhopal Lakes", unsafe_allow_html = True, attributes = {"class": "waterQuality")
 
 #add a sidebar
 st.sidebar.subheader("Visualisation Settings")

@@ -12,12 +12,12 @@ import plotly.express as px
 import streamlit_option_menu as option_menu
 
 css = 
-.waterQuality{
+""".waterQuality{
   font-size: 30px;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   color: #393053;
-}
+}"""
 
 #title
 st.write("Water Quality Analysis of Bhopal Lakes", unsafe_allow_html = True, attributes = {"class": "waterQuality"})

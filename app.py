@@ -9,7 +9,7 @@ import plotly.graph_objs as go
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
+import streamlit_option_menu as option_menu
 
 #configuration
 st.set_option('deprecation.showfileUploaderEncoding',False)

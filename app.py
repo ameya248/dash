@@ -27,10 +27,13 @@ chart_select = st.sidebar.selectbox(
 )
 if chart_select == 'Hathaikheda dam':
       df = pd.read_csv('finalHK.csv')
+      st.subheader('Hathaikheda dam')
 elif chart_select == 'Sarangpani lake' :
      df = pd.read_csv('final-new.csv')
+     st.subheader('Sarangpani lake')
 elif chart_select == 'Upper lake' :
      df = pd.read_csv('finalHK.csv')
+     st.subheader('Upper Lake')
 
 
 global numeric_columns

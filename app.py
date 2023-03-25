@@ -11,7 +11,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit_option_menu as option_menu
 
-css = .waterQuality{
+css = 
+.waterQuality{
   font-size: 30px;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;

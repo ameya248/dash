@@ -24,7 +24,7 @@ import streamlit_option_menu as option_menu
 #  st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 #title
-st.write("Water Quality Analysis of Bhopal Lakes", unsafe_allow_html = True, attributes = {"class": "waterQuality"})
+st.markdown("Water Quality Analysis of Bhopal Lakes", unsafe_allow_html = True, attributes = {"class": "waterQuality"})
 
 #add a sidebar
 st.sidebar.subheader("Visualisation Settings")

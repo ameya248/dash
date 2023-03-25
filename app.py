@@ -13,7 +13,7 @@ import streamlit_option_menu as option_menu
 
 #title
 st.markdown( 
- '<div style = "font-size: 30px; font-family: "Source Sans Pro", sans-serif; font-weight: 600; color: #393053;"> Water Quality Analysis of Bhopal Lake <br> </div>', 
+ '<div style = "font-size: 30px; font-family: "Source Sans Pro", sans-serif; font-weight: 600; color: #635985"> Water Quality Analysis of Bhopal Lake <br> </div>', 
  unsafe_allow_html = True
  )
 

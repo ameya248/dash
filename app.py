@@ -11,25 +11,10 @@ import pandas as pd
 import plotly.express as px
 import streamlit_option_menu as option_menu
 
-st.markdown(
-  """
-  <styles>
-  .css-1offfwp{
-  font-size: 30px;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 600;
-  color: #393053;
-  }
-  </styles>
-  """,
-  unsafe_allow_html = True
-)
-
-
 #title
 st.markdown(
  f"""
- <div class = "css-1offfwp"> Water Quality Analysis of Bhopal Lake <br> </div>
+ '<div style = "font-size: 30px; font-family: "Source Sans Pro", sans-serif; font-weight: 600; color: #393053;"> Water Quality Analysis of Bhopal Lake <br> </div>'
  """, 
  unsafe_allow_html = True
  )

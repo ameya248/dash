@@ -11,9 +11,12 @@ import pandas as pd
 import plotly.express as px
 import streamlit_option_menu as option_menu
 
-
-with open('styles.css')as f:
- st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+css = .waterQuality{
+  font-size: 30px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  color: #393053;
+}
 
 #title
 st.write("Water Quality Analysis of Bhopal Lakes", unsafe_allow_html = True, attributes = {"class": "waterQuality"})

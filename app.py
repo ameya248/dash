@@ -14,7 +14,7 @@ import streamlit_option_menu as option_menu
 st.markdown(
   """
   <styles>
-  .waterQuality{
+  .css-1offfwp{
   font-size: 30px;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -29,7 +29,7 @@ st.markdown(
 #title
 st.markdown(
  f"""
- <div class = "waterQuality"> "Water Quality Analysis of Bhopal Lakes" <br> </div>
+ <div class = "css-1offfwp"> Water Quality Analysis of Bhopal Lake <br> </div>
  """, 
  unsafe_allow_html = True
  )

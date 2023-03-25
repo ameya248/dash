@@ -11,11 +11,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit_option_menu as option_menu
 
-#configuration
-st.set_option('deprecation.showfileUploaderEncoding',False)
-
 #title
-st.title("Water Analysis")
+st.title('<p style = "size: 26px; color: #393053;"> Water Quality Analysis of Bhopal Lakes \n</p>', unsafe_allow_html = True)
 
 #add a sidebar
 st.sidebar.subheader("Visualisation Settings")

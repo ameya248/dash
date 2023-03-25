@@ -38,7 +38,7 @@ elif chart_select == 'Upper lake' :
 
 global numeric_columns
 try:
-    st.write(df)
+    st.write(df.head())
     numeric_columns  = list(df.select_dtypes(['float','int' ]).columns)
 except Exception as e:
     print(e)

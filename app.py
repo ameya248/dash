@@ -38,7 +38,7 @@ elif chart_select == 'Sarangpani lake' :
      df = pd.read_csv('final-new.csv')
      st.subheader('Sarangpani lake')
 elif chart_select == 'Upper lake' :
-     df = pd.read_csv('finalHK.csv')
+     df = pd.read_csv('finalUPL.csv')
      st.subheader('Upper Lake')
 
 

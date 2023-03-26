@@ -38,6 +38,9 @@ elif chart_select == 'Sarangpani lake' :
 elif chart_select == 'Upper lake' :
      df = pd.read_csv('finalUPL.csv')
      st.subheader('Upper Lake')
+elif chart_select == 'Motia Talab' :
+     df = pd.read_csv('motia_lake_concatenated.csv.csv')
+     st.subheader('Motia Talab')
 
 
 global numeric_columns

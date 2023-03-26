@@ -23,7 +23,7 @@ st.markdown(
  unsafe_allow_html = True
  )
 
-st.markdown('\\n')
+st.markdown('\n')
 
 
 #add a sidebar

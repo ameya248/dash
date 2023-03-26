@@ -6,16 +6,12 @@ import plotly.express as px
 import chart_studio.plotly as py
 import chart_studio.tools as tls
 import plotly.graph_objs as go
-import streamlit as st
-import pandas as pd
 import plotly.express as px
 import streamlit_option_menu as option_menu
-
 
 with open("styles.css") as source_style:
  st.markdown(f"<style>{source_style.read()}</style>", 
              unsafe_allow_html = True)
-
 
 #title
 st.markdown( 
@@ -24,7 +20,6 @@ st.markdown(
  )
 
 st.markdown('\n')
-
 
 #add a sidebar
 st.sidebar.subheader("Visualisation Settings")
@@ -51,9 +46,6 @@ try:
     numeric_columns  = list(df.select_dtypes(['float','int' ]).columns)
 except Exception as e:
     print(e)
-
-   
-
     
 
 # add a select widget to the sidebar
@@ -97,7 +89,7 @@ if chart_select == 'Histogram':
     try:
         x_values = st.sidebar.selectbox('Select the variable to plot histogram', options = numeric_columns)
         bins = st.sidebar.slider("Select the number of bins", min_value=5, max_value=50, value=20, step=1)
-        plot = px.histogram(data_frame = df, x = x_values, nbins=bins)
+        plot = px.histogram(data_frame = df, x = x_values, nbins=bins, color = #111F4D)
         st.plotly_chart(plot)
     except Exception as e:
         print(e)

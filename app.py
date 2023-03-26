@@ -23,6 +23,9 @@ st.markdown(
  unsafe_allow_html = True
  )
 
+st.markdown("---")
+
+
 #add a sidebar
 st.sidebar.subheader("Visualisation Settings")
 

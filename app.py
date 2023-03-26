@@ -89,7 +89,7 @@ if chart_select == 'Histogram':
     try:
         x_values = st.sidebar.selectbox('Select the variable to plot histogram', options = numeric_columns)
         bins = st.sidebar.slider("Select the number of bins", min_value=5, max_value=50, value=20, step=1)
-        plot = px.histogram(data_frame = df, x = x_values, nbins=bins, color = #111F4D)
+        plot = px.histogram(data_frame = df, x = x_values, nbins=bins)
         st.plotly_chart(plot)
     except Exception as e:
         print(e)

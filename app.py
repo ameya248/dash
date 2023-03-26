@@ -19,7 +19,7 @@ with open("styles.css") as source_style:
 
 #title
 st.markdown( 
- '<div style = "font-size: 30px; font-family: "Source Sans Pro", sans-serif; font-weight: 600; color: #635985"> Water Quality Analysis of Bhopal Lake <br> </div>', 
+ '<div> Water Quality Analysis of Bhopal Lake</div>', 
  unsafe_allow_html = True
  )
 

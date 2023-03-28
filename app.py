@@ -40,7 +40,6 @@ elif selected == "EDA":
  
   st.sidebar.subheader("Visualisation Settings")
 
-
   chart_select = st.sidebar.selectbox(
 		label = "Select the Lake",
     options = ['Hathaikheda Dam', 'Sarangpani Lake', 'Upper Lake', 'Lendiya Lake']
@@ -106,7 +105,7 @@ elif selected == "EDA":
         st.plotly_chart(plot)
     except Exception as e:
         print(e)
-
+				
   if chart_select == 'Histogram':
     st.sidebar.subheader('Histogram Settings')
     try:

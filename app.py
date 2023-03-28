@@ -22,44 +22,63 @@ st.markdown(
 st.markdown('\n')
 
 #add a sidebar
-st.sidebar.subheader("Visualisation Settings")
 
-# add a select widget to the sidebar
-chart_select = st.sidebar.selectbox(
+with st.sidebar:
+    selected = option_menu.option_menu(
+        menu_title = "Main Menu",
+        options = ["Home", "EDA"]
+    )
+  
+if selected == "Home":
+ st.markdown( 
+ '<div> Monitoring Water Quality of Bhopal Region using Satellite Image Processing and GIS Techniques</div>', 
+ unsafe_allow_html = True
+ )
+
+ """about the project"""
+ 
+ 
+elif selected == "EDA":
+  st.markdown("""<h style = " "> Exploratory Data Analysis </h>""", unsafe_allow_html = True)
+ 
+  st.sidebar.subheader("Visualisation Settings")
+
+
+  chart_select = st.sidebar.selectbox(
     label = "Select the Lake",
     options = ['Hathaikheda dam', 'Sarangpani lake', 'Upper lake']
-)
-if chart_select == 'Hathaikheda dam':
+  )
+  if chart_select == 'Hathaikheda dam':
       df = pd.read_csv('finalHK.csv')
       st.subheader('Hathaikheda dam')
-elif chart_select == 'Sarangpani lake' :
+  elif chart_select == 'Sarangpani lake' :
      df = pd.read_csv('final-new.csv')
      st.subheader('Sarangpani lake')
-elif chart_select == 'Upper lake' :
+  elif chart_select == 'Upper lake' :
      df = pd.read_csv('finalUPL.csv')
      st.subheader('Upper Lake')
 
 
    
-show_data = st.sidebar.checkbox("Show dataset")
+  show_data = st.sidebar.checkbox("Show dataset")
 
-if show_data:
+  if show_data:
     st.write(df)
 
-global numeric_columns
-try:
+  global numeric_columns
+  try:
     numeric_columns  = list(df.select_dtypes(['float','int' ]).columns)
-except Exception as e:
+  except Exception as e:
     print(e)
     
 
-# add a select widget to the sidebar
-chart_select = st.sidebar.selectbox(
+
+  chart_select = st.sidebar.selectbox(
     label = "Select the Chart Type",
     options = ['Scatterplots', 'Lineplots', 'Histogram', 'Boxplot']
-)
+  )
 
-if chart_select == 'Scatterplots':
+  if chart_select == 'Scatterplots':
     st.sidebar.subheader('Scatterplot Settings')
     try:
         x_values = st.sidebar.selectbox('X axis', options = numeric_columns)
@@ -69,7 +88,7 @@ if chart_select == 'Scatterplots':
     except Exception as e:
         print(e)
 
-if chart_select == 'Lineplots':
+  if chart_select == 'Lineplots':
     st.sidebar.subheader('Lineplots Settings')
     try:
         x_values = st.sidebar.selectbox('X axis', options = numeric_columns)
@@ -79,7 +98,7 @@ if chart_select == 'Lineplots':
     except Exception as e:
         print(e)
 
-if chart_select == 'Boxplot':
+  if chart_select == 'Boxplot':
     st.sidebar.subheader('Boxplot Settings')
     try:
         x_values = st.sidebar.selectbox('X axis', options = numeric_columns)
@@ -89,7 +108,7 @@ if chart_select == 'Boxplot':
     except Exception as e:
         print(e)
 
-if chart_select == 'Histogram':
+  if chart_select == 'Histogram':
     st.sidebar.subheader('Histogram Settings')
     try:
         x_values = st.sidebar.selectbox('Select the variable to plot histogram', options = numeric_columns)

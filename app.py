@@ -27,7 +27,7 @@ st.sidebar.subheader("Visualisation Settings")
 # add a select widget to the sidebar
 chart_select = st.sidebar.selectbox(
     label = "Select the Lake",
-    options = ['Hathaikheda dam', 'Sarangpani lake', 'Upper lake', 'Lendiya Lake']
+    options = ['Hathaikheda dam', 'Sarangpani lake', 'Upper lake']
 )
 if chart_select == 'Hathaikheda dam':
       df = pd.read_csv('finalHK.csv')
@@ -38,9 +38,7 @@ elif chart_select == 'Sarangpani lake' :
 elif chart_select == 'Upper lake' :
      df = pd.read_csv('finalUPL.csv')
      st.subheader('Upper Lake')
-elif chart_select == 'Lendiya Lake' :
-     df = pd.read_csv('Lendiya.csv')
-     st.subheader('Lendiya Lake')
+
 
    
 show_data = st.sidebar.checkbox("Show dataset")

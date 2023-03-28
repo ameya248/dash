@@ -40,73 +40,73 @@ elif selected == "EDA":
 
     chart_select = st.sidebar.selectbox(label="Select the Lake", options=['Hathaikheda Dam', 'Sarangpani Lake', 'Upper Lake', 'Lendiya Lake'])
 
-if chart_select == 'Hathaikheda dam':
-    df = pd.read_csv('finalHK.csv')
-    st.subheader('Hathaikheda dam')
+    if chart_select == 'Hathaikheda dam':
+        df = pd.read_csv('finalHK.csv')
+        st.subheader('Hathaikheda dam')
 
-elif chart_select == 'Sarangpani lake':
-    df = pd.read_csv('final-new.csv')
-    st.subheader('Sarangpani lake')
+    elif chart_select == 'Sarangpani lake':
+        df = pd.read_csv('final-new.csv')
+        st.subheader('Sarangpani lake')
 
-elif chart_select == 'Upper lake':
-    df = pd.read_csv('finalUPL.csv')
-    st.subheader('Upper Lake')
+    elif chart_select == 'Upper lake':
+        df = pd.read_csv('finalUPL.csv')
+        st.subheader('Upper Lake')
 
-elif chart_select == 'Lendiya Lake':
-    df = pd.read_csv('Lendiya.csv')
-    st.subheader('Lendiya Lake')
+    elif chart_select == 'Lendiya Lake':
+        df = pd.read_csv('Lendiya.csv')
+        st.subheader('Lendiya Lake')
 
-show_data = st.sidebar.checkbox("Show dataset")
+    show_data = st.sidebar.checkbox("Show dataset")
 
-if show_data:
-    st.write(df)
+    if show_data:
+        st.write(df)
 
-global numeric_columns
-try:
-    numeric_columns = list(df.select_dtypes(['float', 'int']).columns)
-except Exception as e:
-    print(e)
-
-chart_select = st.sidebar.selectbox(
-    label="Select the Chart Type",
-    options=['Scatterplots', 'Lineplots', 'Histogram', 'Boxplot'])
-
-if chart_select == 'Scatterplots':
-    st.sidebar.subheader('Scatterplot Settings')
+    global numeric_columns
     try:
-        x_values = st.sidebar.selectbox('X axis', options=numeric_columns)
-        y_values = st.sidebar.selectbox('Y axis', options=numeric_columns)
-        plot = px.scatter(data_frame=df, x=x_values, y=y_values)
-        st.plotly_chart(plot)
+        numeric_columns = list(df.select_dtypes(['float', 'int']).columns)
     except Exception as e:
         print(e)
 
-if chart_select == 'Lineplots':
-    st.sidebar.subheader('Lineplots Settings')
-    try:
-        x_values = st.sidebar.selectbox('X axis', options=numeric_columns)
-        y_values = st.sidebar.selectbox('Y axis', options=numeric_columns)
-        plot = px.area(data_frame=df, x=x_values, y=y_values)
-        st.plotly_chart(plot)
-    except Exception as e:
-        print(e)
+    chart_select = st.sidebar.selectbox(
+        label="Select the Chart Type",
+        options=['Scatterplots', 'Lineplots', 'Histogram', 'Boxplot'])
 
-if chart_select == 'Boxplot':
-    st.sidebar.subheader('Boxplot Settings')
-    try:
-        x_values = st.sidebar.selectbox('X axis', options=numeric_columns)
-        y_values = st.sidebar.selectbox('Y axis', options=numeric_columns)
-        plot = px.box(data_frame=df, x=x_values, y=y_values)
-        st.plotly_chart(plot)
-    except Exception as e:
-        print(e)
+    if chart_select == 'Scatterplots':
+        st.sidebar.subheader('Scatterplot Settings')
+        try:
+            x_values = st.sidebar.selectbox('X axis', options=numeric_columns)
+            y_values = st.sidebar.selectbox('Y axis', options=numeric_columns)
+            plot = px.scatter(data_frame=df, x=x_values, y=y_values)
+            st.plotly_chart(plot)
+        except Exception as e:
+            print(e)
 
-if chart_select == 'Histogram':
-    st.sidebar.subheader('Histogram Settings')
-    try:
-        x_values = st.sidebar.selectbox('Select the variable to plot histogram', options=numeric_columns)
-        bins = st.sidebar.slider("Select the number of bins", min_value=5, max_value=50, value=20, step=1)
-        plot = px.histogram(data_frame=df, x=x_values, nbins=bins)
-        st.plotly_chart(plot)
-    except Exception as e:
-        print(e)
+    if chart_select == 'Lineplots':
+        st.sidebar.subheader('Lineplots Settings')
+        try:
+            x_values = st.sidebar.selectbox('X axis', options=numeric_columns)
+            y_values = st.sidebar.selectbox('Y axis', options=numeric_columns)
+            plot = px.area(data_frame=df, x=x_values, y=y_values)
+            st.plotly_chart(plot)
+        except Exception as e:
+            print(e)
+
+    if chart_select == 'Boxplot':
+        st.sidebar.subheader('Boxplot Settings')
+        try:
+            x_values = st.sidebar.selectbox('X axis', options=numeric_columns)
+            y_values = st.sidebar.selectbox('Y axis', options=numeric_columns)
+            plot = px.box(data_frame=df, x=x_values, y=y_values)
+            st.plotly_chart(plot)
+        except Exception as e:
+            print(e)
+
+    if chart_select == 'Histogram':
+        st.sidebar.subheader('Histogram Settings')
+        try:
+            x_values = st.sidebar.selectbox('Select the variable to plot histogram', options=numeric_columns)
+            bins = st.sidebar.slider("Select the number of bins", min_value=5, max_value=50, value=20, step=1)
+            plot = px.histogram(data_frame=df, x=x_values, nbins=bins)
+            st.plotly_chart(plot)
+        except Exception as e:
+            print(e)

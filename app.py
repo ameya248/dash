@@ -42,10 +42,14 @@ elif chart_select == 'Lendiya Lake' :
      df = pd.read_csv('final-new-0.csv')
      st.subheader('Lendiya Lake')
 
+   
+show_data = st.sidebar.checkbox("Show dataset")
+
+if show_data:
+    st.write(df)
 
 global numeric_columns
 try:
-    st.write(df.head())
     numeric_columns  = list(df.select_dtypes(['float','int' ]).columns)
 except Exception as e:
     print(e)

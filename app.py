@@ -39,7 +39,7 @@ elif chart_select == 'Upper lake' :
      df = pd.read_csv('finalUPL.csv')
      st.subheader('Upper Lake')
 elif chart_select == 'Lendiya Lake' :
-     df = pd.read_csv('final-new-0.csv')
+     df = pd.read_csv('Lendiya.csv')
      st.subheader('Lendiya Lake')
 
    

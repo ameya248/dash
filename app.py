@@ -50,13 +50,13 @@ elif selected == "EDA":
     options = ['Hathaikheda dam', 'Sarangpani lake', 'Upper lake']
   )
   if chart_select == 'Hathaikheda dam':
-      df = pd.read_csv('finalHK.csv')
+      df = pd.read_csv('Hathaikheda.csv')
       st.subheader('Hathaikheda dam')
   elif chart_select == 'Sarangpani lake' :
-     df = pd.read_csv('final-new.csv')
+     df = pd.read_csv('SarangpaniLakefinal.csv')
      st.subheader('Sarangpani lake')
   elif chart_select == 'Upper lake' :
-     df = pd.read_csv('finalUPL.csv')
+     df = pd.read_csv('UPlake.csv')
      st.subheader('Upper Lake')
 
 
